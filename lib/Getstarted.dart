@@ -1,6 +1,5 @@
 import 'package:assignment1/login.dart';
 import 'package:flutter/material.dart';
-
 class Getstarted extends StatefulWidget {
   const Getstarted({super.key});
 
@@ -15,7 +14,7 @@ class _GetstartedState extends State<Getstarted> {
       body: SafeArea(
         child: Column(
           children: [
-            const SizedBox(height: 18.0,),
+            const SizedBox(height: 32.0,),
             const Center(
               child: Text(
                 'HELLO EVERYONE',
@@ -23,12 +22,12 @@ class _GetstartedState extends State<Getstarted> {
               ),
             ),
             const SizedBox(height: 16.0,),
-            Image.asset('assets/undraw_Startup_life_re_8ow9.png'),
+            Image.asset('assets/undraw_Startup_life_re_8ow9.png',height: 300.0,width: 500.0,),
             const SizedBox(
               height: 16.0,
             ),
             const Text(
-              'THANK YOU FOR CHOOSE US',
+              'Thank you for choose us',
               style: TextStyle(fontSize: 24, fontWeight: FontWeight.w500),
             ),
             const SizedBox(
@@ -40,13 +39,14 @@ class _GetstartedState extends State<Getstarted> {
                 child: ElevatedButton(
                     onPressed: () {
                       Navigator.push(context,
-                          MaterialPageRoute(builder: (context) => const Loginpage()));
+                          MaterialPageRoute(builder: (context) => Loginpage()));
                     },
                     child:
-                        const Text('Getstarted', style: TextStyle(fontSize: 24))))
+                    const Text('Getstarted', style: TextStyle(fontSize: 24))))
           ],
         ),
       ),
+
     );
   }
 }

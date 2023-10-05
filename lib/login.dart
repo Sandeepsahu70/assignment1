@@ -14,9 +14,9 @@ class _LoginpageState extends State<Loginpage> {
     return Scaffold(
       body: SingleChildScrollView(
         child: Padding(
-          padding: const EdgeInsets.all(8.0),
+          padding: const EdgeInsets.all(16.0),
           child: Column(
-            mainAxisAlignment: MainAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Image.asset(
                 'assets/undraw_Mobile_login_re_9ntv.png',
@@ -38,9 +38,6 @@ class _LoginpageState extends State<Loginpage> {
                 'User name and email',
                 style: TextStyle(fontSize: 24, fontWeight: FontWeight.w800),
               ),
-              const SizedBox(
-                height: 18.0,
-              ),
               const TextField(
                 decoration: InputDecoration(
                     border: OutlineInputBorder(),
@@ -56,35 +53,39 @@ class _LoginpageState extends State<Loginpage> {
               const TextField(
                 decoration: InputDecoration(
                     border: OutlineInputBorder(),
-                    hintText: 'User name and email'),
+                    hintText: ' User name and email '),
               ),
               const SizedBox(
                 height: 16.0,
               ),
-              SizedBox(
-                height: 50.0,
-                width: 300.0,
-                child: ElevatedButton(
-                    onPressed: () {},
-                    child: const Text(
-                      'Login',
-                      style: TextStyle(fontSize: 24,),
-                    )),
+              Center(
+                child: SizedBox(
+                  height: 50.0,
+                  width: 300.0,
+                  child: ElevatedButton(
+                      onPressed: () {},
+                      child: const Text(
+                        'Login',
+                        style: TextStyle(fontSize: 24,),
+                      )),
+                ),
               ),
               const SizedBox(
                 height: 18.0,
               ),
-              SizedBox(
-                  height: 50.0,
-                  width: 300.0,
-                  child: ElevatedButton(
-                      onPressed: () {
-                        Navigator.push(context,
-                            MaterialPageRoute(builder: (context) => const Signup()));
-                      }, child: const Text(' New register',
-                    style: TextStyle(fontSize: 24,),
-                  ),
-                  ),
+              Center(
+                child: SizedBox(
+                    height: 50.0,
+                    width: 300.0,
+                    child: ElevatedButton(
+                        onPressed: () {
+                          Navigator.push(context,
+                              MaterialPageRoute(builder: (context) => const Signup()));
+                        }, child: const Text(' New register',
+                      style: TextStyle(fontSize: 24,),
+                    ),
+                    ),
+                ),
               ),
             ],
           ),
